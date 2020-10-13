@@ -16,8 +16,8 @@ public class Types {
 	private Set<Pokemon> pokemonId;
 	private String typeOne;
 	private String typeTwo;
-	private List<String> strengths;
-	private List<String> weaknesses;
+	private String strengths;
+	private String weaknesses;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,21 +42,21 @@ public class Types {
 		this.typeTwo = typeTwo;
 	}
 	
-	public List<String> getStrengths() {
+	public String getStrengths() {
 		return strengths;
 	}
-	public void setStrengths(List<String> strengths) {
+	public void setStrengths(String strengths) {
 		this.strengths = strengths;
 	}
 	
-	public List<String> getWeaknesses() {
+	public String getWeaknesses() {
 		return weaknesses;
 	}
-	public void setWeaknesses(List<String> weaknesses) {
+	public void setWeaknesses(String weaknesses) {
 		this.weaknesses = weaknesses;
 	}
 	
-	@ManyToMany(mappedBy = "pokemonId")
+	@ManyToMany(mappedBy = "typesId")
 	public Set<Pokemon> getPokemonId() {
 		return pokemonId;
 	}

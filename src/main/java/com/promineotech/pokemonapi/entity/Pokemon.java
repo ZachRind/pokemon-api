@@ -47,7 +47,7 @@ public class Pokemon {
 	public Set<Types> getTypesId() {
 		return typesId;
 	}
-	public void setTypeId(Set<Types> typesId) {
+	public void setTypesId(Set<Types> typesId) {
 		this.typesId = typesId;
 	}
 	

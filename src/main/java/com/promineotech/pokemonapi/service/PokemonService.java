@@ -1,5 +1,7 @@
 package com.promineotech.pokemonapi.service;
 
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,13 +31,13 @@ public class PokemonService {
 	
 	public Pokemon createPokemon(Pokemon pokemon, Long trainerId, Long typeId, Long gymLeaderId) throws Exception {
 		Trainers trainer = trainersRepo.findOne(trainerId);
-		Types type = typesRepo.findOne(typeId);
+		Set<Types> type = (Set<Types>) typesRepo.findOne(typeId);
 		GymLeaders gymLeader = gymLeaderRepo.findOne(gymLeaderId);
 		if (trainer == null || gymLeader == null || type == null ) {
 			throw new Exception("Trainer, Gym Leader, or Type does not exist.");
 		}
 		pokemon.setTrainerId(trainer);
-		pokemon.setTypeId(type);
+		pokemon.setTypesId(type);
 		pokemon.setGymLeaderId(gymLeader);
 		return repo.save(pokemon);
 		
