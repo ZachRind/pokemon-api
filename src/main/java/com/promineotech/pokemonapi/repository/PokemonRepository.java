@@ -1,5 +1,11 @@
 package com.promineotech.pokemonapi.repository;
 
-public interface PokemonRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.promineotech.pokemonapi.entity.Pokemon;
+
+public interface PokemonRepository extends CrudRepository<Pokemon, Long> {
 
 }
+
+

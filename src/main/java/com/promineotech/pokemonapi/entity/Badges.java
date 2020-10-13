@@ -31,8 +31,8 @@ public class Badges {
 	public GymLeaders getGymLeaderId() {
 		return gymLeaderId;
 	}
-	public void setGymLeaderId(GymLeaders gymLeader) {
-		this.gymLeaderId = gymLeader;
+	public void setGymLeaderId(GymLeaders gymLeaderId) {
+		this.gymLeaderId = gymLeaderId;
 	}
 	
 	@ManyToOne

@@ -31,7 +31,7 @@ public class BadgesController {
 	@RequestMapping(value="/{badgeId})", method=RequestMethod.DELETE)
 	public ResponseEntity<Object> deleteBadge(@PathVariable long badgeId) {
 		service.deleteBadge(badgeId);
-		return new ResponseEntity<Object>("Badge with id" + badgeId + "has been revoked from trainer.", HttpStatus.OK);
+		return new ResponseEntity<Object>("Badge with id " + badgeId + "has been revoked from trainer.", HttpStatus.OK);
 	}
 	
 }
