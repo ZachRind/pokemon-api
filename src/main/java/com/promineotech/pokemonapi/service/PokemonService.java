@@ -1,5 +1,6 @@
 package com.promineotech.pokemonapi.service;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,18 +30,30 @@ public class PokemonService {
 	@Autowired
 	private GymLeadersRepository gymLeaderRepo;
 	
-	public Pokemon createPokemon(Pokemon pokemon, Long trainerId, Long typeId, Long gymLeaderId) throws Exception {
+	public Pokemon createTrainerPokemon(Pokemon pokemon, Long trainerId, Long typesId) throws Exception {
 		Trainers trainer = trainersRepo.findOne(trainerId);
-		Set<Types> type = (Set<Types>) typesRepo.findOne(typeId);
-		GymLeaders gymLeader = gymLeaderRepo.findOne(gymLeaderId);
-		if (trainer == null || gymLeader == null || type == null ) {
-			throw new Exception("Trainer, Gym Leader, or Type does not exist.");
+		Types pType = typesRepo.findOne(typesId);
+		if (trainer == null || pType == null ) {
+			throw new Exception("Trainer or Type does not exist.");
 		}
+		Set<Types> pSetTypes = new HashSet<Types>();
+		pSetTypes.add(pType);
 		pokemon.setTrainerId(trainer);
-		pokemon.setTypesId(type);
+		pokemon.setTypesId(pSetTypes);
+		return repo.save(pokemon);	
+	}
+	
+	public Pokemon createGymLeaderPokemon(Pokemon pokemon, Long gymLeaderId, Long typesId) throws Exception {
+		GymLeaders gymLeader = gymLeaderRepo.findOne(gymLeaderId);
+		Types pType = typesRepo.findOne(typesId);
+		if (gymLeader == null || pType == null) {
+			throw new Exception("Gym Leader or Type does not exist.");
+		}
+		Set<Types> pSetTypes = new HashSet<Types>();
+		pSetTypes.add(pType);
 		pokemon.setGymLeaderId(gymLeader);
-		return repo.save(pokemon);
-		
+		pokemon.setTypesId(pSetTypes);
+		return repo.save(pokemon);	
 	}
 	
 	

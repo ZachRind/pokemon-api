@@ -19,14 +19,23 @@ public class PokemonController {
 	@Autowired
 	private PokemonService service;
 	
-	@RequestMapping(method=RequestMethod.POST)
-	public ResponseEntity<Object> createPokemon(@RequestBody Pokemon pokemon, @PathVariable Long trainerId, @PathVariable Long typeId, @PathVariable Long gymLeaderId) {
+	@RequestMapping(value="/{trainerId}/{typesId}", method=RequestMethod.POST)
+	public ResponseEntity<Object> createTrainerPokemon(@RequestBody Pokemon pokemon, @PathVariable Long trainerId, @PathVariable Long typesId) {
 		try {
-			return new ResponseEntity<Object>(service.createPokemon(pokemon, trainerId, typeId, gymLeaderId), HttpStatus.OK);
+			return new ResponseEntity<Object>(service.createTrainerPokemon(pokemon, trainerId, typesId), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
+	
+//	@RequestMapping(value="/{gymLeaderId}/{typesId}", method=RequestMethod.POST)
+//	public ResponseEntity<Object> createGymLeaderPokemon(@RequestBody Pokemon pokemon, @PathVariable Long gymLeaderId, @PathVariable Long typesId) {
+//		try {
+//			return new ResponseEntity<Object>(service.createGymLeaderPokemon(pokemon, gymLeaderId, typesId), HttpStatus.OK);
+//		} catch (Exception e) {
+//			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
+//		}
+//	}
 	
 	
 	@RequestMapping(value="/{pokemonId}", method=RequestMethod.GET)
@@ -35,21 +44,21 @@ public class PokemonController {
 	}
 	
 	
-	@RequestMapping(value="/{pokemonId}", method=RequestMethod.PUT)
+	@RequestMapping(value="/{pokemonId}", method=RequestMethod.PUT) //evolves Pokemon by updating breed
 	public ResponseEntity<Object> updatePokemon(@RequestBody Pokemon pokemon, @PathVariable Long pokemonId) {
 		try {
 			return new ResponseEntity<Object>(service.updatePokemon(pokemon, pokemonId), HttpStatus.OK);
-			// how to reference 'breed?' return new ResponseEntity<Object>("Your " +  + )
+			//return new ResponseEntity<Object>("Your " +  + )
 		} catch (Exception e) {
 			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
 		}
 	}
 	
 	
-	@RequestMapping(value="/pokemonId", method=RequestMethod.DELETE)
+	@RequestMapping(value="/{pokemonId}", method=RequestMethod.DELETE)
 	public ResponseEntity<Object> deletePokemon(@PathVariable long pokemonId) {
 		service.deletePokemon(pokemonId);
-		return new ResponseEntity<Object>("Pokemon with id number " + pokemonId + "has been released back into the wild.", HttpStatus.OK);
+		return new ResponseEntity<Object>("Pokemon with id number " + pokemonId + " has been released back into the wild.", HttpStatus.OK);
 	}
 	
 }

@@ -11,6 +11,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Pokemon {
 
@@ -30,6 +32,7 @@ public class Pokemon {
 		this.id = id;
 	}
 	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "trainerId")
 	public Trainers getTrainerId() {
@@ -39,6 +42,7 @@ public class Pokemon {
 		this.trainerId = trainerId;
 	}
 	
+	@JsonIgnore
 	@ManyToMany //add annotation to type entity
 	@JoinTable(
 		name = "pokemon_types",
