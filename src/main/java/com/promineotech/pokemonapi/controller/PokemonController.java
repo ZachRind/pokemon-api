@@ -19,7 +19,7 @@ public class PokemonController {
 	@Autowired
 	private PokemonService service;
 	
-	@RequestMapping(value="/{trainerId}/{typesId}", method=RequestMethod.POST)
+	@RequestMapping(value="/trainer/{trainerId}/{typesId}", method=RequestMethod.POST)
 	public ResponseEntity<Object> createTrainerPokemon(@RequestBody Pokemon pokemon, @PathVariable Long trainerId, @PathVariable Long typesId) {
 		try {
 			return new ResponseEntity<Object>(service.createTrainerPokemon(pokemon, trainerId, typesId), HttpStatus.OK);
@@ -28,14 +28,14 @@ public class PokemonController {
 		}
 	}
 	
-//	@RequestMapping(value="/{gymLeaderId}/{typesId}", method=RequestMethod.POST)
-//	public ResponseEntity<Object> createGymLeaderPokemon(@RequestBody Pokemon pokemon, @PathVariable Long gymLeaderId, @PathVariable Long typesId) {
-//		try {
-//			return new ResponseEntity<Object>(service.createGymLeaderPokemon(pokemon, gymLeaderId, typesId), HttpStatus.OK);
-//		} catch (Exception e) {
-//			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
-//		}
-//	}
+	@RequestMapping(value="/gymLeader/{gymLeaderId}/{typesId}", method=RequestMethod.POST)
+	public ResponseEntity<Object> createGymLeaderPokemon(@RequestBody Pokemon pokemon, @PathVariable Long gymLeaderId, @PathVariable Long typesId) {
+		try {
+			return new ResponseEntity<Object>(service.createGymLeaderPokemon(pokemon, gymLeaderId, typesId), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<Object>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
 	
 	
 	@RequestMapping(value="/{pokemonId}", method=RequestMethod.GET)

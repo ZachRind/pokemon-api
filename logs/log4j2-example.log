@@ -7700,3 +7700,181 @@ java.lang.IllegalStateException: Ambiguous handler methods mapped for HTTP path 
 			--- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
 2020-10-17 19:42:27.475  INFO Howard
 			--- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2020-10-18 15:28:05.963  INFO Howard
+			--- [napi.App.main()] c.p.p.App                                : Starting App on Howard with PID 22212 (C:\Users\Zach\Promineo\Workspaces\pokemonapi\target\classes started by Zach in C:\Users\Zach\Promineo\Workspaces\pokemonapi)
+2020-10-18 15:28:05.995  INFO Howard
+			--- [napi.App.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b3492df: startup date [Sun Oct 18 15:28:05 MST 2020]; root of context hierarchy
+2020-10-18 15:28:06.431  INFO Howard
+			--- [napi.App.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-10-18 15:28:06.735  INFO Howard
+			--- [napi.App.main()] o.h.v.i.u.Version                        : HV000001: Hibernate Validator 5.1.3.Final
+2020-10-18 15:28:06.869  INFO Howard
+			--- [napi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a96ed706] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-18 15:28:06.888  INFO Howard
+			--- [napi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-18 15:28:06.898  INFO Howard
+			--- [napi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-18 15:28:06.902  INFO Howard
+			--- [napi.App.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-18 15:28:07.318  INFO Howard
+			--- [napi.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-10-18 15:28:07.469  INFO Howard
+			--- [napi.App.main()] o.a.c.c.StandardService                  : Starting service Tomcat
+2020-10-18 15:28:07.471  INFO Howard
+			--- [napi.App.main()] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.0.26
+2020-10-18 15:28:07.561  INFO Howard
+			--- [ost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-10-18 15:28:07.562  INFO Howard
+			--- [ost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1570 ms
+2020-10-18 15:28:07.998  INFO Howard
+			--- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2020-10-18 15:28:08.001  INFO Howard
+			--- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-10-18 15:28:08.002  INFO Howard
+			--- [ost-startStop-1] o.s.b.c.e.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-10-18 15:28:08.153  INFO Howard
+			--- [napi.App.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-10-18 15:28:08.164  INFO Howard
+			--- [napi.App.main()] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-18 15:28:08.255  INFO Howard
+			--- [napi.App.main()] o.h.Version                              : HHH000412: Hibernate Core {4.3.11.Final}
+2020-10-18 15:28:08.258  INFO Howard
+			--- [napi.App.main()] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2020-10-18 15:28:08.260  INFO Howard
+			--- [napi.App.main()] o.h.c.Environment                        : HHH000021: Bytecode provider name : javassist
+2020-10-18 15:28:08.405  INFO Howard
+			--- [napi.App.main()] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2020-10-18 15:28:09.558  INFO Howard
+			--- [napi.App.main()] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-10-18 15:28:09.667  INFO Howard
+			--- [napi.App.main()] o.h.h.i.a.ASTQueryTranslatorFactory      : HHH000397: Using ASTQueryTranslatorFactory
+2020-10-18 15:28:09.942  INFO Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000228: Running hbm2ddl schema update
+2020-10-18 15:28:09.944  INFO Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000102: Fetching database metadata
+2020-10-18 15:28:09.946  INFO Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000396: Updating schema
+2020-10-18 15:28:10.037  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: pokemon_api.badges
+2020-10-18 15:28:10.039  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [gym_leader_id, description, gym, id, type, trainer_id]
+2020-10-18 15:28:10.040  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_4bjmnjs2n9hdo3g2lra4snmf1, fk_8f5ah105ak8nc65ycq72bixsm]
+2020-10-18 15:28:10.041  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [fk_4bjmnjs2n9hdo3g2lra4snmf1, fk_8f5ah105ak8nc65ycq72bixsm, primary]
+2020-10-18 15:28:10.052  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: pokemon_api.gym_leaders
+2020-10-18 15:28:10.053  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [type_specialization, last_name, gym, id, first_name]
+2020-10-18 15:28:10.055  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+2020-10-18 15:28:10.055  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+2020-10-18 15:28:10.064  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: pokemon_api.pokemon_types
+2020-10-18 15:28:10.066  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [pokemon_id, types_id]
+2020-10-18 15:28:10.067  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: [fk_91o8n205a7wrgalausuuhdech, fk_ti660dfm1nbfopxm6h3c9qptw]
+2020-10-18 15:28:10.068  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [fk_91o8n205a7wrgalausuuhdech, primary]
+2020-10-18 15:28:10.078  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: pokemon.pokemon
+2020-10-18 15:28:10.079  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [name, id]
+2020-10-18 15:28:10.080  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+2020-10-18 15:28:10.082  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+2020-10-18 15:28:10.092  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: pokemon_api.trainers
+2020-10-18 15:28:10.093  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [last_name, id, region, first_name, age]
+2020-10-18 15:28:10.094  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+2020-10-18 15:28:10.095  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+2020-10-18 15:28:10.104  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000261: Table found: pokemon_api.types
+2020-10-18 15:28:10.104  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000037: Columns: [type_two, type_one, strengths, weaknesses, id]
+2020-10-18 15:28:10.106  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000108: Foreign keys: []
+2020-10-18 15:28:10.107  INFO Howard
+			--- [napi.App.main()] o.h.t.h.TableMetadata                    : HHH000126: Indexes: [primary]
+2020-10-18 15:28:10.127 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000388: Unsuccessful: alter table `pokemon` add column `breed` varchar(255)
+2020-10-18 15:28:10.128 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : Duplicate column name 'breed'
+2020-10-18 15:28:10.130 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000388: Unsuccessful: alter table `pokemon` add column `gym_leader_id` bigint
+2020-10-18 15:28:10.131 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : Duplicate column name 'gym_leader_id'
+2020-10-18 15:28:10.133 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000388: Unsuccessful: alter table `pokemon` add column `trainer_id` bigint
+2020-10-18 15:28:10.134 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : Duplicate column name 'trainer_id'
+2020-10-18 15:28:10.136 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000388: Unsuccessful: alter table `pokemon` add constraint FK_itgx0bhii2oxut4117y8w6auv foreign key (`gym_leader_id`) references `gym_leaders` (`id`)
+2020-10-18 15:28:10.137 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : Duplicate foreign key constraint name 'FK_itgx0bhii2oxut4117y8w6auv'
+2020-10-18 15:28:10.139 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000388: Unsuccessful: alter table `pokemon` add constraint FK_c6xpcra1fcgsbmmmyh96uax6h foreign key (`trainer_id`) references `trainers` (`id`)
+2020-10-18 15:28:10.140 ERROR Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : Duplicate foreign key constraint name 'FK_c6xpcra1fcgsbmmmyh96uax6h'
+2020-10-18 15:28:10.140  INFO Howard
+			--- [napi.App.main()] o.h.t.h.SchemaUpdate                     : HHH000232: Schema update complete
+2020-10-18 15:28:10.573  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b3492df: startup date [Sun Oct 18 15:28:05 MST 2020]; root of context hierarchy
+2020-10-18 15:28:10.623  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gymLeaders/{gymLeaderId}/trainers/{trainerId}/badges/{badgeId})],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.BadgesController.deleteBadge(long)
+2020-10-18 15:28:10.625  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gymLeaders/{gymLeaderId}/trainers/{trainerId}/badges],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.BadgesController.createBadge(com.promineotech.pokemonapi.entity.Badges,java.lang.Long,java.lang.Long)
+2020-10-18 15:28:10.626  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/gymLeaders],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.GymLeadersController.createGymLeader(com.promineotech.pokemonapi.entity.GymLeaders)
+2020-10-18 15:28:10.628  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pokemon/{pokemonId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.PokemonController.getPokemon(java.lang.Long)
+2020-10-18 15:28:10.630  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pokemon/{pokemonId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.PokemonController.deletePokemon(long)
+2020-10-18 15:28:10.631  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pokemon/{pokemonId}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.PokemonController.updatePokemon(com.promineotech.pokemonapi.entity.Pokemon,java.lang.Long)
+2020-10-18 15:28:10.632  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pokemon/gymLeader/{gymLeaderId}/{typesId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.PokemonController.createGymLeaderPokemon(com.promineotech.pokemonapi.entity.Pokemon,java.lang.Long,java.lang.Long)
+2020-10-18 15:28:10.633  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pokemon/trainer/{trainerId}/{typesId}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.PokemonController.createTrainerPokemon(com.promineotech.pokemonapi.entity.Pokemon,java.lang.Long,java.lang.Long)
+2020-10-18 15:28:10.634  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trainers],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.TrainersController.createTrainer(com.promineotech.pokemonapi.entity.Trainers)
+2020-10-18 15:28:10.636  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> com.promineotech.pokemonapi.controller.TypesController.createType(com.promineotech.pokemonapi.entity.Types)
+2020-10-18 15:28:10.638  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-10-18 15:28:10.639  INFO Howard
+			--- [napi.App.main()] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2020-10-18 15:28:10.657  INFO Howard
+			--- [napi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-10-18 15:28:10.659  INFO Howard
+			--- [napi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-10-18 15:28:10.683  INFO Howard
+			--- [napi.App.main()] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-10-18 15:28:10.771  INFO Howard
+			--- [napi.App.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-10-18 15:28:10.792  INFO Howard
+			--- [napi.App.main()] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-18 15:28:10.797  INFO Howard
+			--- [napi.App.main()] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2020-10-18 15:28:10.821  INFO Howard
+			--- [napi.App.main()] o.a.t.u.n.NioSelectorPool                : Using a shared selector for servlet write/read
+2020-10-18 15:28:10.833  INFO Howard
+			--- [napi.App.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-10-18 15:28:10.836  INFO Howard
+			--- [napi.App.main()] c.p.p.App                                : Started App in 5.074 seconds (JVM running for 8.527)
+2020-10-18 15:28:24.834  INFO Howard
+			--- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-10-18 15:28:24.835  INFO Howard
+			--- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2020-10-18 15:28:24.852  INFO Howard
+			--- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2020-10-18 15:28:24.868  WARN Howard
+			--- [nio-8080-exec-2] o.s.w.s.PageNotFound                     : Request method 'POST' not supported
