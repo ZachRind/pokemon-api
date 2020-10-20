@@ -13,13 +13,13 @@ import com.promineotech.pokemonapi.entity.Badges;
 import com.promineotech.pokemonapi.service.BadgesService;
 
 @RestController
-@RequestMapping("/gymLeaders/{gymLeaderId}/trainers/{trainerId}/badges") //?? /gymLeaders/{id}/etc ??
+@RequestMapping("/badges")
 public class BadgesController {
 
 	@Autowired
 	private BadgesService service;
 	
-	@RequestMapping(method=RequestMethod.POST)
+	@RequestMapping(value="/gymLeader/{gymLeaderId}/trainer/{trainerId}", method=RequestMethod.POST)
 	public ResponseEntity<Object> createBadge(@RequestBody Badges badges, @PathVariable Long gymLeaderId, @PathVariable Long trainerId) {
 		try {
 			return new ResponseEntity<Object>(service.createBadge(badges, gymLeaderId, trainerId), HttpStatus.OK);
@@ -28,10 +28,10 @@ public class BadgesController {
 		}
 	}
 	
-	@RequestMapping(value="/{badgeId})", method=RequestMethod.DELETE)
-	public ResponseEntity<Object> deleteBadge(@PathVariable long badgeId) {
-		service.deleteBadge(badgeId);
-		return new ResponseEntity<Object>("Badge with id " + badgeId + "has been revoked from trainer.", HttpStatus.OK);
+	@RequestMapping(value="/{badgesId}", method=RequestMethod.DELETE)
+	public ResponseEntity<Object> deleteBadge(@PathVariable long badgesId) {
+		service.deleteBadge(badgesId);
+		return new ResponseEntity<Object>("Badge with id " + badgesId + " has been revoked from trainer.", HttpStatus.OK);
 	}
 	
 }
